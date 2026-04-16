@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/MadhuryaAK/MyMavenToGradle.git'
+                git branch: 'main', url: 'https://github.com/MadhuryaAK/MyMavenToGradle.git'
             }
         }
         stage('Build') {
@@ -22,7 +22,7 @@ pipeline {
         stage('Run Application') {
             steps {
                 // Start the JAR application
-                sh 'java -jar target/MyMavenGradleApp-1.0-SNAPSHOT.jar'
+                sh 'java -jar target/MyMavenToGradleApp-1.0-SNAPSHOT.jar'
             }
         } 
     }
